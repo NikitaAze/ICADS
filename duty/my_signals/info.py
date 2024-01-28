@@ -8,7 +8,7 @@ from .updating import get_last_version
 def info(event: MySignalEvent) -> str:
     update_info = ''
     last_v, changes = get_last_version()
-    if last_v != __version__:
+    if last_v != 0.0:
         update_info = 'Доступно обновление! Новая версия: ' + last_v + '\n'
         if changes != '':
             update_info += 'Что нового:\n' + changes + '\n\n'
@@ -18,7 +18,8 @@ def info(event: MySignalEvent) -> str:
         владелец=ment_user(owner),
         ид=event.chat.iris_id,
         имя=event.chat.name,
-        версия=__version__
+        версия=0.0
+        прифекс=.с
     )
     event.msg_op(2, update_info + message)
     return "ok"
