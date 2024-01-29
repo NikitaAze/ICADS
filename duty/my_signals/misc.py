@@ -16,19 +16,11 @@ from duty.objects import dp, MySignalEvent
 @dp.my_signal_event_register('хелп', 'help')
 def a(event: MySignalEvent) -> str:
     event.edit(f'''
-         📗Помощь по использованию дежурного Acva
-
+         📗Помощь по использованию бота Page bot
          🌐Сообщество Acva : https://vk.com/acva_duty
-
-         📝Список команд : https://vk.cc/ctcfdn
-
+         📝Список команд : vk.com/@alias_bot-komandy
          👥Помощники ТП Acva :
-         1.https://vk.com/mavan_demon - Агент
-
-         🗣Чат общения : https://vk.cc/ctcfzk
-
-         ✉️Чат ТП Acva : https://vk.cc/ctcfvk
-         
+         1.нет
          📓 Ваша админ панель: {event.db.host}
     '''.replace('    ', ''))
     return "ok"
